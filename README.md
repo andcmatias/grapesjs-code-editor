@@ -52,3 +52,5 @@ Settings
    }
 }
 </pre>
+
+For wrapper listing all styles.
