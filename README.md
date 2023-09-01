@@ -1,5 +1,6 @@
 # grapesjs-code-editor
 GrapesJS plugin Code Editor using Monaco Editor
+Edit HTML and CSS
 
 <a href="https://codepen.io/Anderson-Caldeireiro-Matias/pen/jOXrvgJ" target="_blank">Demo</a>
 
