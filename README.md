@@ -1,6 +1,8 @@
 # grapesjs-code-editor
 GrapesJS plugin Code Editor using Monaco Editor
 
+<a href="https://codepen.io/Anderson-Caldeireiro-Matias/pen/jOXrvgJ" target="_blank">Demo</a>
+
 Must be configured in grapesjs selectorManager: { componentFirst: true }
 
 Settings
