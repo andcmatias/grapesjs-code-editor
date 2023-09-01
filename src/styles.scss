@@ -1,0 +1,224 @@
+export default `
+.code-panel {
+    text-align: left;
+    font-size: 1rem;
+    height: 100%;
+    overflow: hidden;
+}
+
+.code-panel section {
+    flex: 1;
+    height: 50%;
+}
+
+.code-panel section .codepanel-separator {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+}
+
+.code-panel section .codepanel-label {
+    margin-top: 5px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #aaa;
+    user-select: none;
+    text-transform: uppercase;
+}
+
+.cp-btn-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    & .#{$prefix}btn-prim {
+        margin: 2.5px;
+    }
+}
+
+.gutter {
+    cursor: ns-resize;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.gutter:after {
+    content: '';
+    display: block;
+    height: 8px;
+    width: 100%;
+    position: absolute;
+    top: -3px;
+    z-index: 150;
+}
+
+.code-panel .CodeMirror {
+    height: 100%;
+}
+
+.cp-delete-css {
+    margin-left: 70%;
+}
+
+.#{$prefix}pn-views {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0;
+}
+
+.#{$prefix}pn-views-container {
+    box-shadow: initial;
+    border-top: 2px solid rgba(0, 0, 0, 0.2);
+    top: 40px;
+    padding-top: 0;
+    height: calc(100% - 40px);
+}
+
+.#{$prefix}pn-views-container,
+.#{$prefix}cv-canvas {
+    transition: width 0.3s ease-in-out;
+}
+
+.m-loader {
+    position: relative;
+}
+
+.m-loader.m-loader--brand:before {
+    border-top-color: #716aca;
+}
+.m-loader.m-loader--lg:before {
+    width: 2rem;
+    height: 2rem;
+    margin-top: -1rem;
+    margin-left: -1rem;
+    border-top-width: 3px;
+    border-right-width: 3px;
+}
+.m-loader:before {
+    border-top-color: #dfe2ea;
+}
+.m-loader:before {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-top: -0.7rem;
+    margin-left: -0.7rem;
+    border-top-width: 2px;
+    border-right-width: 2px;
+}
+.m-loader:before {
+    content: '';
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-top: 2px solid #07d;
+    border-right: 2px solid transparent;
+    border-radius: 50%;
+    -webkit-animation: m-loader-rotate 0.6s linear infinite;
+    animation: m-loader-rotate 0.6s linear infinite;
+}
+
+.m-blockui {
+    background: #fff;
+    -webkit-box-shadow: 0px 1px 15px 1px rgba(69,65,78,0.1);
+    box-shadow: 0px 1px 15px 1px rgba(69,65,78,0.1);
+}
+.m-blockui {
+    border-radius: 4px;
+    display: table;
+    table-layout: fixed;
+}
+
+.m-blockui>span {
+    color: #6f727d;
+}
+.m-blockui>span {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.m-blockui>span>.m-loader, .m-blockui>span>.m-spinner {
+    margin-right: 10px;
+}
+.m-loader {
+    position: relative;
+}
+
+.m-blockui>span>.m-loader, .m-blockui>span>.m-spinner {
+    margin-right: 10px;
+}
+.m-loader {
+    position: relative;
+}
+
+.m-loader.m-loader--info:before {
+    border-top-color: #36a3f7;
+}
+.m-loader.m-loader--lg:before {
+    width: 2rem;
+    height: 2rem;
+    margin-top: -1rem;
+    margin-left: -1rem;
+    border-top-width: 3px;
+    border-right-width: 3px;
+}
+
+.m-loader.m-loader--info:before {
+    border-top-color: #36a3f7;
+}
+.m-loader.m-loader--lg:before {
+    width: 2rem;
+    height: 2rem;
+    margin-top: -1rem;
+    margin-left: -1rem;
+    border-top-width: 3px;
+    border-right-width: 3px;
+}
+.m-loader:before {
+    border-top-color: #dfe2ea;
+}
+.m-loader:before {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-top: -0.7rem;
+    margin-left: -0.7rem;
+    border-top-width: 2px;
+    border-right-width: 2px;
+}
+.m-loader:before {
+    content: '';
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-top: 2px solid #07d;
+    border-right: 2px solid transparent;
+    border-radius: 50%;
+    -webkit-animation: m-loader-rotate 0.6s linear infinite;
+    animation: m-loader-rotate 0.6s linear infinite;
+}
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.m-blockui>span {
+    color: #6f727d;
+}
+.m-blockui>span {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+@keyframes m-loader-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+`

@@ -1,0 +1,24 @@
+{
+  "name": "grapesjs-code-editor",
+  "version": "1.0.0",
+  "description": "Grapesjs Code Editor",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [
+    "grapesjs",
+    "plugin",
+    "component",
+    "code-editor"
+  ],
+  "author": "Anderson Caldeireiro Matias",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@monaco-editor/loader": "^1.3.3"
+  }
+}
