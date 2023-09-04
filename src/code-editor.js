@@ -84,8 +84,6 @@ export class CodeEditor {
         panel && !this.opts.appendTo && panel.set('appendContent', this.codePanel).trigger('change:appendContent');
         this.opts.appendTo && $(this.opts.appendTo).append(this.codePanel);
 
-
-
         this.htmlMonacoEditor = this.monacoEditor.editor.create(this.htmlCodeEditor, {
             value: '',
             language: 'html',
@@ -107,6 +105,7 @@ export class CodeEditor {
                 }, 300)
               // true if setValue call
             } else {
+                this.unblockPage(this.htmlCodeEditor)
               // false if user input
             }
         });
@@ -117,6 +116,7 @@ export class CodeEditor {
                     this.cssMonacoEditor.getAction('editor.action.formatDocument').run().then(() => this.unblockPage(this.cssCodeEditor));
                 }, 300)
             } else {
+                this.unblockPage(this.cssCodeEditor)
             }
         });
 
@@ -138,6 +138,8 @@ export class CodeEditor {
         });
 
         this.unblockPage(null);
+        this.unblockPage(this.htmlCodeEditor)
+        this.unblockPage(this.cssCodeEditor)
     }
 
     createAutoClose(editor) {

@@ -12,6 +12,10 @@
     "component",
     "code-editor"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andcmatias/grapesjs-code-editor"
+  },
   "author": "Anderson Caldeireiro Matias",
   "license": "ISC",
   "devDependencies": {
