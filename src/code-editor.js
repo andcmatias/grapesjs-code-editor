@@ -458,6 +458,13 @@ export class CodeEditor {
                         { 
                             this.previousCssCode = rule ? this.cssFormat(rule?.toCSS({ allowEmpty: true })) : '';
                         }
+
+                        component.getClasses().map((classe) => {
+                            const prop = editor.Css.getRule(`.${classe}`)
+                            if (prop) {
+                                this.previousCssCode += `${prop.toCSS()} `;
+                            }
+                        });
                         this.cssMonacoEditor.getModel().setValue(this.previousCssCode);
                     }
 
