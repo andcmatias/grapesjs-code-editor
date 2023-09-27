@@ -351,6 +351,7 @@ export class CodeEditor {
                         //* Have to check closing bracket existence for every rule cause it can be missed after split and add it if it doesnt match
                         return `${cssObjectRule}}`;
                     }
+                    return cssObjectRule;
                 })
                 .forEach(rule => {
                     if (/^#/.test(rule))
