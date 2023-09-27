@@ -347,6 +347,7 @@ export class CodeEditor {
                 .split('}\n')
                 .filter((el) => Boolean(el.trim()))
                 .map((cssObjectRule) => {
+                    cssObjectRule = cssObjectRule.trim();
                     if (!(/}$/.test(cssObjectRule))) {
                         //* Have to check closing bracket existence for every rule cause it can be missed after split and add it if it doesnt match
                         return `${cssObjectRule}}`;
@@ -438,7 +439,7 @@ export class CodeEditor {
                 
                 const rule = editor.Styles.getSelected() || undefined;
                 if (this.cssMonacoEditor && rule) {
-                    if (component.attributes.type === 'wrapper') 
+                    if (component.components().length) 
                     {
                         this.previousCssCode = this.editor.CodeManager.getCode(component, 'css', {
                             cssc: this.editor.Css
