@@ -402,15 +402,9 @@ export class CodeEditor {
                 {
                     this.editor.Css.remove(rules);
                 }
-    
-                if (!cssCode) {
-                    rules && rule?.setStyle('')
-                }
-                else {
-                    let cssRule = editor.Parser.parseCss(cssCode);
-                    cssRule.map((newRule) => newRule && rule?.setStyle(newRule));
-                    this.editor.Css.addRules(cssCode);
-                }
+
+                rules && rule?.setStyle("");
+                this.editor.Css.addRules(cssCode);
             }
             this.previousCssCode = cssCode;
         }
