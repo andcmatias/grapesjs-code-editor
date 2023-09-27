@@ -1,5 +1,5 @@
 import commands from './commands';
-import styles from './styles.scss'
+import styles from './styles.js'
 
 export default (editor, opts = {}) => {
     const style = (styles).replaceAll("#{$prefix}",editor.getConfig('stylePrefix'))
